@@ -1,0 +1,174 @@
+
+#artist {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 1030px;
+    height: 630px;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+    padding-right: 10px; /* Tạo khoảng cách bên phải cho nội dung */
+}
+
+#artist::-webkit-scrollbar {
+    width: 8px; /* Độ rộng của scrollbar */
+}
+
+#artist::-webkit-scrollbar-track {
+    background: transparent; /* Nền của khung cuộn */
+}
+
+#artist::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #1DB954; /* Màu của thanh cuộn */
+    border-radius: 10px; /* Làm tròn góc */
+}
+
+#main-artist {
+    box-sizing: border-box;
+    display: flex;
+    width: 982px;
+    height: 231px;
+}
+#avatar-profile {
+    width: 231px;
+    height: 231px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #757575;
+    background-image: url('/MVC/View/img/profile-bg-avatar.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-artist {
+    padding-top: 102px;
+    width: 731px;
+    height: 129px;
+    color: white;
+}
+#artist-text {
+    width: 731px;
+    height: 33px;
+    font-size: 22px;
+    font-weight: 500;
+}
+#artist-name {
+    width: 731px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 800;
+}
+#artist-follower {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#play {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 36px;
+}
+#threedots i {
+    color: white;
+    font-size: 30px;
+}
+#threedots {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    margin-right: 47px;
+}
+#threedots i:hover {
+    color: rgba(255, 255, 255, 0.25);;
+    cursor: pointer;
+}
+#listsong {
+    margin-top: 40px;
+    width: 982px;
+    height: 288px;
+}
+#listsong-title {
+    color: #CCCCCC;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+#sharp-title {
+width: 307px;
+height: 44px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 110%;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+flex: none;
+margin-bottom: 24px;
+}
+#songs {
+    padding-top: 5px;
+    width: 982px;
+    height: 230px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 8px;
+}
+#songs div {
+    height: 220px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: 0.3s ease; /* Tạo hiệu ứng mượt */
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+#heart-icon2 {
+    display: flex;
+    width: 171px;
+    height: 171px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(69.93deg, #296265 1.75%, #344A5C 34.18%, #3F2F52 62.3%, #471C4B 88.25%);
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+    cursor: pointer;
+}
+#heart-icon2 i{
+    color: white;
+    font-size: 67px;
+}
+#songs div:hover img, #heart-icon2:hover{
+    transform: scale(1.05); /* Tăng kích thước icon khi hover */
+}
+#songs img {
+    width: 171px;
+    height: 171px;
+    border-radius: 12px;
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+}
+#songs::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome và Safari */
+}

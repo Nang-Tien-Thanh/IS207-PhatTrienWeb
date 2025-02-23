@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Đưa CSS vào file riêng -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Playlist Information</h1>
+        <input type="text" id="search-bar" placeholder="Search...">
+    </header>
+
+    <!-- Playlist Details -->
+    <main class="playlist-container">
+        <div class="playlist-info">
+            <img src="../img/playlist-cover.png" alt="Playlist Cover">
+            <div>
+                <h2>My Favorite Songs</h2>
+                <p>Author: John Doe</p>
+                <p>Date Created: 12/10/2024</p>
+            </div>
+        </div>
+
+        <!-- Song List -->
+        <section class="song-list">
+            <h3>Songs:</h3>
+            <ul>
+                <li class="song-item" data-id="1">
+                    <img src="../img/song1.png" alt="Song 1">
+                    <div>
+                        <h4>What a Wonderful World</h4>
+                        <p>Artist: The Macarons Project</p>
+                        <p>Added: 10/12/2024</p>
+                    </div>
+                </li>
+                <li class="song-item" data-id="2">
+                    <img src="../img/song2.png" alt="Song 2">
+                    <div>
+                        <h4>Imagine</h4>
+                        <p>Artist: John Lennon</p>
+                        <p>Added: 11/12/2024</p>
+                    </div>
+                </li>
+                <!-- Thêm bài hát mới bằng cách bổ sung JSON hoặc từ API -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Music Player -->
+    <footer class="music-player">
+        <div class="player-controls">
+            <button id="prev-song"><i class="fa fa-backward"></i></button>
+            <button id="play-song"><i class="fa fa-play"></i></button>
+            <button id="next-song"><i class="fa fa-forward"></i></button>
+        </div>
+        <div class="progress-bar">
+            <input id="progress-slider" type="range" min="0" max="100" value="0">
+        </div>
+        <div class="current-song-info">
+            <p>Now Playing: <span id="current-song">What a Wonderful World</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slider = document.getElementById("progress-slider");
+
+            // Thay đổi màu nền slider khi kéo
+            if (slider) {
+                slider.addEventListener("input", function () {
+                    const percentage = (this.value / this.max) * 100;
+                    this.style.background = `linear-gradient(90deg, #1DB954 ${percentage}%, #ddd ${percentage}%)`;
+                });
+            }
+
+            // Event handler cho các nút điều khiển nhạc
+            document.getElementById("play-song").addEventListener("click", () => {
+                console.log("Play button clicked");
+            });
+
+            document.getElementById("prev-song").addEventListener("click", () => {
+                console.log("Previous button clicked");
+            });
+
+            document.getElementById("next-song").addEventListener("click", () => {
+                console.log("Next button clicked");
+            });
+        });
+    </script>
+</body>
+
+</html>
